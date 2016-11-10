@@ -4,22 +4,25 @@ var a = prompt('Give me an integer: ', a);
 var b = prompt('Give me another intenger: ', b);
 function pow(a,b){	
 	var x = a;
+	if (b < 0) {
+			x = -1/(a*b);
+		return x;
+		}
+		else if (b==0) {
+			x = 1;
+		return x;}
 	for (var i=1; i<b; i++) {
-		x*=a;
+			x*=a;
+		}
+		return x;
 	}
-	return x;
-}
-
-if (a != null & b != null) {
-	alert('It is not an intenger!');
-} else {
-	alert(pow(a,b));
-}
+	
+alert(pow(a,b));
 
 
 
 
-//Task2
+// Task2
 
 var arr = []; //
 for (var i = 0; i < 5; i++){
@@ -38,3 +41,4 @@ alert('User doesnt exist');
     
 
  findName(arr,name);
+
